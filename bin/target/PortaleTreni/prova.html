@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="demo">
+<h2>The XMLHttpRequest Object</h2>
+<button type="button" onclick="loadDoc()">Change Content</button>
+</div>
+
+<script>
+function loadDoc() {
+ 
+	var bodyJSON = {'nome':'11.03 da HTML',
+            "descrizione":"12345"   
+           }; 
+   
+ 
+   var xhttp = new XMLHttpRequest();
+ 
+  
+   
+  
+  
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML =
+      this.responseText;
+    }
+  };
+   xhttp.open("GET", "http://localhost:8081//Web02/categoriaRest/add");
+   xhttp.setRequestHeader('Content-type', 'application/json')
+   xhttp.send(JSON.stringify(bodyJSON));  
+}
+</script>
+
+</body>
+</html>
+
