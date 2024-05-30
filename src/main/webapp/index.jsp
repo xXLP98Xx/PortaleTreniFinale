@@ -42,14 +42,14 @@
   </div>
 </div>
 
- <form method="POST" action="crea_treno" modelAttribute="treno">
 	<div class="bg-sky-500 flex justify-center py-8">
+		<form method="POST" action="crea_treno" modelAttribute="treno">
 	  <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-4xl">
 	    <h2 class="text-lg font-bold mb-4">CREA TRENO</h2>
 	    <center>
 	    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
 	      <div>
-	        <label class="block text-sky-800">Compagnia</label>
+	        <label class="block text-sky-800">COMPAGNIA</label>
 	<div class="lx yz ze alm aqv">
 	<div class="gx tn ul">
 	<div>
@@ -64,18 +64,17 @@
 	</div>
 	      </div>
 	      <div>
-	        <label class="block text-sky-800">Stringa</label>
-	        <input type="text" placeholder="Inserisci città  o stazione" class="w-full p-2 border border-sky-300 rounded">
+	        <label class="block text-sky-800">SIGLA</label>
+	        <input type="text" placeholder="ES. HPPRPP" class="w-full p-2 border border-sky-300 rounded">
 	      </div>
 	      <div class="flex items-end">
-	        <input type="submit" class="bg-sky-500 text-white px-4 py-2 rounded">CREA</input>
+	        <input type="submit" value="CREA" class="bg-sky-500 text-white px-4 py-2 rounded"></input>
 	      </div>
 	    </div>
 	        </center>
 	  </div>
+		</form>
 	</div>
-</form>
-	
 <div class="bg-sky-500 text-white py-8">
   <div class="max-w-6xl mx-auto px-4">
     <div class="flex flex-col md:flex-row items-center">
