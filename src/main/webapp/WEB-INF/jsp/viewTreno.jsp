@@ -1,7 +1,7 @@
 
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ page import="com.corso.vo.*" %>
+<%@ page import="com.corso.treno.model.*" %>
 
 <!DOCTYPE html>
 <html>
@@ -18,7 +18,7 @@
  <!--  ${utente.nome}
  - ${utente.cognome}-->
  
- <% TrenoVO t = (TrenoVO) request.getAttribute("treno") ; 
+ <% Treno t = (Treno)request.getAttribute("treno"); 
  	//out.write(t.getId() + " " + t.getCompagnia()) ; 
  	out.write(t.getCompagnia() + " " + t.getUtenteId());
  %>
