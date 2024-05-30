@@ -1,6 +1,7 @@
 package com.corso.controller;
 
 import java.util.ArrayList;
+
 import java.util.List;
 
 
@@ -151,6 +152,20 @@ public class TrenoController {
 		model.addAttribute("treno", treno);
 		trenoService.remove(treno.getId());
 		return "viewDeleteTreno";
+	}
+	
+	
+	@PostMapping("/crea_treno")
+	public String addTreno(@ModelAttribute("treno") @Valid Treno treno, BindingResult bindingResult, Model model) {
+		
+		if (bindingResult.hasErrors()) {
+			model.addAttribute("message", "ci sono errori, ricompila!!");
+			return "formAddUtente";
+		}
+		
+		trenoService.add(treno); 
+		model.addAttribute("treno", treno);
+		return "viewTreno";
 	}
 
 }
